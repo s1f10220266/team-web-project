@@ -1,0 +1,16 @@
+img {
+    max-width: 100%;
+    max-height: 100%;
+   }
+.size_ero-la{
+    width: 30%;
+    height: auto;
+}
+.size_tajima{
+    width: 30%;
+    height: auto;
+}
+.sightseeing{
+    display:flex;
+    justify-content: space-around;
+}
