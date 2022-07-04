@@ -2,15 +2,29 @@ img {
     max-width: 100%;
     max-height: 100%;
    }
-.size_ero-la{
+.size_image{
     width: 30%;
     height: auto;
 }
-.size_tajima{
-    width: 30%;
-    height: auto;
-}
-.sightseeing{
+.print_side{
     display:flex;
     justify-content: space-around;
+}
+#sightseiin_hedder{
+    position:absolute ; left:130px ; top:550px ; 
+}
+#sightseiin_hedder2{
+    position:absolute ; left:755px ; top:550px ; 
+}
+#food_hedder{
+    position:absolute ; left:130px ; top:940px ; 
+}
+#food_hedder2{
+    position:absolute ; left:755px ; top:940px ; 
+}
+#place_hedder{
+    position:absolute ; left:150px ; top:1305px ; 
+}
+#place_I_wanna_go{
+    margin-left: 150px;
 }
