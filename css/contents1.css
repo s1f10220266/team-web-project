@@ -34,3 +34,15 @@
     width: 50px;
     height: 25px;
 }
+
+.sidebar{
+    position : fixed;
+    top : 0;
+    left : 0;
+    width : 20%;
+    color : #000000;
+    background-color : #a9ceec;
+    font-size : 24px;
+    font-weight : bold;
+    text-align : left
+}
