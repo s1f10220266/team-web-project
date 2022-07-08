@@ -1,0 +1,52 @@
+#picture1{
+    width: 200px;
+    height: 200px;
+}
+
+#slide_button{
+    text-align: center;
+}
+
+#slide{
+    height: 400px;
+    width: 600px;
+}
+
+#flex{
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: flex-start;
+    justify-content: flex-start;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+#li{
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: flex-start;
+    justify-content: flex-start;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+#Lake{
+    width: 50px;
+    height: 25px;
+}
+
+.sidebar{
+    position : fixed;
+    top : 0;
+    left : 0;
+    width : 20%;
+    color : #000000;
+    background-color : #a9ceec;
+    font-size : 24px;
+    font-weight : bold;
+    text-align : left
+}
+
+.main{
+    margin-left : 20%;
+}
