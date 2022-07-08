@@ -6,6 +6,7 @@ img {
     width: 30%;
     height: auto;
 }
+
 .print_side{
     display:flex;
     justify-content: space-around;
@@ -23,8 +24,9 @@ img {
     position:absolute ; left:755px ; top:940px ; 
 }
 #place_hedder{
-    position:absolute ; left:150px ; top:1305px ; 
+    position:absolute ; left:150px ; top:1325px ; 
 }
 #place_I_wanna_go{
     margin-left: 150px;
+    margin-top: 40px;
 }
