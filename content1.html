@@ -38,6 +38,20 @@
             フィンランド：<span id="indianow"></span>
         </p>
         
+
+
+        <div id="slide_button">
+            <img src="images/flag-of-india-india-flag.jpg" id="slide">
+            <p><span id="imageIndex"></span>枚目</p>
+            
+                <form action="#">
+                    <p>
+                        <input type="button" id="prev" value="prev" onclick="changeImage(-1)">
+                        <input type="button" id="next" value="next" onclick="changeImage(1)">
+                    </p>
+                </form>
+            
+        </div>
         
         <script>
             'use strict';
@@ -51,6 +65,18 @@
             const india_present = `${month + 1}/${date}/${ja_hour - 3}:${time-30}`
             document.getElementById('japannow').textContent = ja_present;
             document.getElementById('indianow').textContent = india_present;
+
+
+            const images = ["images/frag.png","images/Santa.jpg", "images/LapLand.jpg", "images/moomin.jpg"];
+            let current = 0;
+            document.getElementById('imageIndex').textContent = current + 1;
+            function changeImage(num) {
+                if (current + num >= 0 && current + num < images.length) {
+                    current += num;
+                    document.getElementById('slide').src = images[current];
+                    document.getElementById('imageIndex').textContent = current + 1;
+                };
+            };
 
 
 
