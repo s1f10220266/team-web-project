@@ -27,5 +27,34 @@
         <div id="place_I_wanna_go">
         <p class="size_image"><img src="images/10692001514.jpg"></p></div>
 
+        <hr>
+
+
+
+        <p>時差は</p>
+
+        <p>
+            日本：<span id="japannow"></span>
+            フィンランド：<span id="indianow"></span>
+        </p>
+        
+        
+        <script>
+            'use strict';
+            const now = new Date();
+            const ja_hour = now.getHours();
+            const time = now.getMinutes();
+            const month = now.getMonth();
+            const date = now.getDate();
+
+            const ja_present = `${month + 1}/${date}/${ja_hour}:${time}`;
+            const india_present = `${month + 1}/${date}/${ja_hour - 6}:${time}`
+            document.getElementById('japannow').textContent = ja_present;
+            document.getElementById('indianow').textContent = india_present;
+
+
+
+        </script>
+
     </body>
 </html>
