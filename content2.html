@@ -32,7 +32,8 @@
             <p>北ヨーロッパ諸国で多く用いられている、いわゆる“スカンジナビアクロス”のデザインを採用した国旗で、青は湖沼と澄んだ空を、白は清らかな雪を象徴する。</p>
     
             <h2><a id="time_diff">時差</a></h2>
-            <p>日本とスペインの時差は7時間です</p>
+            <p>日本とスペインの時差は<strong>7時間</strong>です</p>
+
             <p>
                 日本：<span id="japannow"></span>
                 スペイン：<span id="spainnow"></span>
@@ -40,7 +41,9 @@
     
             <h2><a id="spot">観光スポット</a></h2>
             <div id="slide_button">
-                <img src="images/frag.png" id="slide">
+                <h2>スライドショー</h2>
+                <p>prevボタンとnextボタンを押して画像を変えて見てみよう!</p>
+                <img src="images/Santa.jpg" id="slide">
                 <p><span id="imageIndex"></span>枚目</p>
     
     
@@ -53,9 +56,9 @@
     
             </div>
             <ul>
-                <li>サンタクロース村(2枚目)</li>
-                <li>ラップランド(3枚目)</li>
-                <li>ムーミンワールドへムーミン(4枚目)</li>
+                <li>1枚目 - サンタクロース村</li>
+                <li>2枚目 - ラップランド</li>
+                <li>3枚目 - ムーミンワールドへムーミン</li>
             </ul>
         </div>
     
@@ -74,7 +77,7 @@
             document.getElementById('japannow').textContent = ja_present;
             document.getElementById('spainnow').textContent = spain_present;
     
-            const images = ["images/frag.png", "images/Santa.jpg", "images/LapLand.jpg", "images/moomin.jpg"];
+            const images = ["images/Santa.jpg", "images/LapLand.jpg", "images/moomin.jpg"];
             let current = 0;
             document.getElementById('imageIndex').textContent = current + 1;
     
