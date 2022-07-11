@@ -21,18 +21,13 @@
     flex-wrap: wrap;
 }
 
-#li{
+#map{
     display: -webkit-flex;
     display: flex;
     -webkit-justify-content: flex-start;
     justify-content: flex-start;
     -webkit-flex-wrap: wrap;
     flex-wrap: wrap;
-}
-
-#Lake{
-    width: 50px;
-    height: 25px;
 }
 
 .sidebar{
@@ -49,4 +44,8 @@
 
 .main{
     margin-left : 20%;
+}
+
+.information{
+    text-align: center;
 }

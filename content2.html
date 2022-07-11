@@ -1,94 +1,107 @@
 <!DOCTYPE html>
 <html lang="ja">
 
-    <head>
-        <meta charset="UTF-8">
-        <title>スペインの紹介ページ</title>
-        <link rel="stylesheet" href="css/content2.css">
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <title>スペインの紹介ページ</title>
+    <link rel="stylesheet" href="css/content2.css">
+</head>
 
-    <body>
-        
-        <div class="main">
-            <h1>スペイン</h1>
-            <img src="images/frag.png">
-            <p>北ヨーロッパに位置するフィンランドを紹介します！フィンランドといえば、かなり寒そうな印象を持ちますが、実は日本と同じように四季があって、夏は暖かくて過ごしやすいそうです。また、世界一幸福度が高い国とも言われていたりします。そんなフィンランドを紹介します！！</p>
+<body>
+
+    <div class="main">
+        <div class="information">
+        <h1>スペイン紹介ページ</h1>
     
-            <h2>目次</h2>
-            <ol>
-                <li><a href="#flag">国旗の意味</a></li>
-                <li><a href="#time_diff">時差</a></li>
-                <li><a href="#spot">観光スポット</a></li>
-            </ol>
-            <div id="flex">
-                <div id="li">
+        <img src="images/frag.png">
+    
+        <p>北ヨーロッパに位置するフィンランドを紹介します！フィンランドといえば、かなり寒そうな印象を持ちますが、実は日本と同じように四季があって、夏は暖かくて過ごしやすいそうです。また、世界一幸福度が高い国とも言われていたりします。そんなフィンランドを紹介します！！</p>
+    </div>
+
+        <h2>目次</h2>
+        <div class="information">
+            <p><a href="#flag">国旗の意味</a></p>
+            <p><a href="#time_diff">時差</a></p>
+            <p><a href="#spot">観光スポット</a></p>
+        </div>
+        <div id="flex">
+            <div id="map">
+                <div class="information">
                     <p>フィンランドは北ヨーロッパに一する国でスウェーデンとロシアに面しています。国土の大半が森で覆われ、さらに湖の数がとても多いことから別名「森と湖の国」と呼ばれています。</p>
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6247519.016149701!2d-8.203027405316911!3d40.130111195181534!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xc42e3783261bc8b%3A0xa6ec2c940768a3ec!2z44K544Oa44Kk44Oz!5e0!3m2!1sja!2sjp!4v1657386730691!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6247519.016149701!2d-8.203027405316911!3d40.130111195181534!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xc42e3783261bc8b%3A0xa6ec2c940768a3ec!2z44K544Oa44Kk44Oz!5e0!3m2!1sja!2sjp!4v1657386730691!5m2!1sja!2sjp"
+                        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
             </div>
-    
-            <h2><a id="flag">国旗の意味</a></h2>
+        </div>
+        <hr>
+        <h2><a id="flag">国旗の意味</a></h2>
+        <div class="information">
             <img src="images/frag.png" id="picture1">
             <p>北ヨーロッパ諸国で多く用いられている、いわゆる“スカンジナビアクロス”のデザインを採用した国旗で、青は湖沼と澄んだ空を、白は清らかな雪を象徴する。</p>
-    
-            <h2><a id="time_diff">時差</a></h2>
+        </div>
+        <hr>
+        <h2><a id="time_diff">時差</a></h2>
+        <div class="information">
             <p>日本とスペインの時差は<strong>7時間</strong>です</p>
-
+            <p>ログイン時</p>
             <p>
                 日本：<span id="japannow"></span>
                 スペイン：<span id="spainnow"></span>
             </p>
-    
-            <h2><a id="spot">観光スポット</a></h2>
-            <div id="slide_button">
-                <h2>スライドショー</h2>
-                <p>prevボタンとnextボタンを押して画像を変えて見てみよう!</p>
-                <img src="images/Santa.jpg" id="slide">
-                <p><span id="imageIndex"></span>枚目</p>
-    
-    
-                <form action="#">
-                    <p>
-                        <input type="button" id="prev" value="prev" onclick="changeImage(-1)">
-                        <input type="button" id="next" value="next" onclick="changeImage(1)">
-                    </p>
-                </form>
-    
-            </div>
-            <ul>
-                <li>1枚目 - サンタクロース村</li>
-                <li>2枚目 - ラップランド</li>
-                <li>3枚目 - ムーミンワールドへムーミン</li>
-            </ul>
         </div>
-    
-        <script>
-            'use strict';
-    
-            const now = new Date();
-            const ja_hour = now.getHours();
-            const time = now.getMinutes();
-            const month = now.getMonth();
-            const date = now.getDate();
-    
-            const ja_present = `${month + 1}/${date}/${ja_hour}:${time}`;
-            const spain_present = `${month + 1}/${date}/${ja_hour - 7}:${time}`
-    
-            document.getElementById('japannow').textContent = ja_present;
-            document.getElementById('spainnow').textContent = spain_present;
-    
-            const images = ["images/Santa.jpg", "images/LapLand.jpg", "images/moomin.jpg"];
-            let current = 0;
-            document.getElementById('imageIndex').textContent = current + 1;
-    
-            function changeImage(num) {
-                if (current + num >= 0 && current + num < images.length) {
-                    current += num;
-                    document.getElementById('slide').src = images[current];
-                    document.getElementById('imageIndex').textContent = current + 1;
-                };
+        <hr>
+        <h2><a id="spot">観光スポット</a></h2>
+        <div id="slide_button">
+            <h2>スライドショー</h2>
+            <p>prevボタンとnextボタンを押して画像を変えて見てみよう!</p>
+            <img src="images/Santa.jpg" id="slide">
+            <p><span id="imageIndex"></span>枚目</p>
+
+
+            <form action="#">
+                <p>
+                    <input type="button" id="prev" value="prev" onclick="changeImage(-1)">
+                    <input type="button" id="next" value="next" onclick="changeImage(1)">
+                </p>
+            </form>
+
+        </div>
+        <ul>
+            <li>1枚目 - サンタクロース村</li>
+            <li>2枚目 - ラップランド</li>
+            <li>3枚目 - ムーミンワールドへムーミン</li>
+        </ul>
+    </div>
+
+    <script>
+        'use strict';
+
+        const now = new Date();
+        const ja_hour = now.getHours();
+        const time = now.getMinutes();
+        const month = now.getMonth();
+        const date = now.getDate();
+
+        const ja_present = `${month + 1}/${date}/${ja_hour}:${time}`;
+        const spain_present = `${month + 1}/${date}/${ja_hour - 7}:${time}`
+
+        document.getElementById('japannow').textContent = ja_present;
+        document.getElementById('spainnow').textContent = spain_present;
+
+        const images = ["images/Santa.jpg", "images/LapLand.jpg", "images/moomin.jpg"];
+        let current = 0;
+        document.getElementById('imageIndex').textContent = current + 1;
+
+        function changeImage(num) {
+            if (current + num >= 0 && current + num < images.length) {
+                current += num;
+                document.getElementById('slide').src = images[current];
+                document.getElementById('imageIndex').textContent = current + 1;
             };
-        </script>
-    </body>
+        };
+    </script>
+</body>
 
 </html>
