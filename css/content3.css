@@ -44,8 +44,12 @@
 
 .main{
     margin-left : 20%;
+    font-size: 1.8em;
 }
 
 .information{
     text-align: center;
+}
+.border{
+    border: solid;
 }
