@@ -22,7 +22,7 @@
         <div class="information">
             <h1>フィンランド紹介ページ</h1>
             <img src="images/frag.png">
-            <p>北欧に位置する国、フィンランドを紹介します！フィンランドといえば、かなり寒そうな印象を持ちますが、実は日本と同じように四季があって、夏は暖かくて過ごしやすいそうです。<br>また、世界一幸福度が高い国とも言われていたりします。そんなフィンランドを紹介します！！
+            <p>北欧に位置する国、フィンランドを紹介します！フィンランドといえば、かなり寒そうな印象を持ちますが、実は<br>日本と同じように四季があって、夏は暖かくて過ごしやすいそうです。<br>また、世界一幸福度が高い国と言われていたりします。そんなフィンランドを紹介します！！
             </p>
         </div>
         <div class="border">
@@ -86,7 +86,7 @@
             <li>1枚目 - サンタクロース村</li>
             <li>2枚目 - ラップランド</li>
             <li>3枚目 - ムーミンワールドへムーミン</li>
-            <li>4枚目 - ムーミン</li>
+            <li>4枚目 - ムーミンワールドのムーミン</li>
         </ul>
     </div>
 
@@ -105,7 +105,7 @@
         document.getElementById('japannow').textContent = ja_present;
         document.getElementById('finnow').textContent = fin_present;
 
-        const images = ["images/Santa.jpg", "images/LapLand.jpg", "images/moomin2.jpg", "images/moomin.jpg"];
+        const images = ["images/Santa.jpg", "images/LapLand.jpg", "images/moomin2.jpg", "<div id='moomin'>images/moomin.jpg</div>"];
         let current = 0;
         document.getElementById('imageIndex').textContent = current + 1;
 
