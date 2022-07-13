@@ -16,6 +16,7 @@
 
 .main{
     margin-left : 20%;
+    font-size: 1.8em;
 }
 
 .contents {
@@ -33,9 +34,4 @@
 
 .information{
     text-align: center;
-}
-
-#moomin{
-    width: 300px;
-    height: 100%;
 }

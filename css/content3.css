@@ -1,6 +1,6 @@
 #picture1{
-    width: 200px;
-    height: 200px;
+    width: 40%;
+    height: 100%;
 }
 
 #slide_button{
@@ -53,3 +53,5 @@
 .border{
     border: solid;
 }
+
+
