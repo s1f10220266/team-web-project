@@ -3,23 +3,15 @@ img {
     max-height: 100%;
    }
 .size_image{
-    width: 40%;
+    width: 60%;
     height: auto;
+    display: block;
+    margin: 0 auto;
 }
 .print_side{
     display:flex;
     justify-content: space-around;
 }
-#sightseiin_hedder{
-    position:absolute ; left:370px ; top:1135px ; 
-}
-#food_hedder{
-    position:absolute ; left:370px ; top:1580px ; 
-}
-#place_hedder{
-    position:absolute ; left:370px ; top:2020px ; 
-}
-
 #slide_button {
     text-align: center;
 }
@@ -36,16 +28,7 @@ img {
     text-align: center;
 }
 .font_size{
-    font-size: 25px 
-}
-#tajima_place{
-    position:absolute ; left:680px ; top:1200px ; 
-}
-#kari-_place{
-    position:absolute ; left:680px ; top:1630px; 
-}
-#elephant_place{
-    position:absolute ; left:680px ; top:2070px; 
+    font-size: 28px 
 }
 .sidebar{
     position : absolute;
