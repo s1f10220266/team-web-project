@@ -78,14 +78,21 @@
     <script>
         'use strict';
 
-        const now = new Date();
-        const ja_hour = now.getHours();
-        const time = now.getMinutes();
-        const month = now.getMonth();
-        const date = now.getDate();
+        let now = new Date();
+        let ja_hour = now.getHours();
+        let time = now.getMinutes();
+        let month = now.getMonth();
+        let date = now.getDate();
+
+        let spain_date = date;
+        let spain_hour = ja_hour - 7;
+        if(spain_hour < 0) {
+            spain_date -= 1;
+            spain_hour = 25 - 7;
+        }
 
         const ja_present = `${month + 1}/${date}/${ja_hour}:${time}`;
-        const spain_present = `${month + 1}/${date}/${ja_hour - 7}:${time}`
+        const spain_present = `${month + 1}/${spain_date}/${spain_hour}:${time}`;
 
         document.getElementById('japannow').textContent = ja_present;
         document.getElementById('spainnow').textContent = spain_present;

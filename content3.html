@@ -93,14 +93,22 @@
     <script>
         'use strict';
 
-        const now = new Date();
-        const ja_hour = now.getHours();
-        const time = now.getMinutes();
-        const month = now.getMonth();
-        const date = now.getDate();
+        let now = new Date();
+        let ja_hour = now.getHours();
+        let time = now.getMinutes();
+        let month = now.getMonth();
+        let date = now.getDate();
+
+        let fin_date = date;
+        let fin_hour = ja_hour - 6;
+
+        if(fin_hour < 0) {
+            fin_date -= 1;
+            fin_hour = 25 - 6;
+        }
 
         const ja_present = `${month + 1}/${date}/${ja_hour}:${time}`;
-        const fin_present = `${month + 1}/${date}/${ja_hour - 6}:${time}`
+        const fin_present = `${month + 1}/${fin_date}/${fin_hour}:${time}`;
 
         document.getElementById('japannow').textContent = ja_present;
         document.getElementById('finnow').textContent = fin_present;
