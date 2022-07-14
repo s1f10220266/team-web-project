@@ -21,7 +21,7 @@
     <div class="main">
         <div class="information">
             <h1>フィンランド紹介ページ</h1>
-            <img src="images/frag.png">
+            <img src="images/frag.png" alt="フィンランドの国旗">
             <p>北欧に位置する国、フィンランドを紹介します！フィンランドといえば、かなり寒そうな印象を持ちますが、実は<br>日本と同じように四季があって、夏は暖かくて過ごしやすいそうです。<br>また、世界一幸福度が高い国と言われていたりします。そんなフィンランドを紹介します！！
             </p>
         </div>
@@ -50,7 +50,7 @@
         <hr>
         <h2><a id="flag">国旗の意味</a></h2>
         <div class="information">
-                <img src="images/frag.png" id="picture1">
+                <img src="images/frag.png" id="picture1" alt="フィンランドの国旗">
             
                 <p>青は湖沼と澄んだ空を、白は清らかな雪、十字は北欧の一国であることを表しています。</p>
             
@@ -70,7 +70,7 @@
         <div id="slide_button">
             <h2>スライドショー</h2>
             <p>prevボタンとnextボタンを押して画像を変えて見てみよう!</p>
-            <img src="images/Santa.jpg" id="slide">
+            <img src="images/Santa.jpg" id="slide" alt="スライドショー">
             <p><span id="imageIndex"></span>枚目</p>
 
 
@@ -93,14 +93,22 @@
     <script>
         'use strict';
 
-        const now = new Date();
-        const ja_hour = now.getHours();
-        const time = now.getMinutes();
-        const month = now.getMonth();
-        const date = now.getDate();
+        let now = new Date();
+        let ja_hour = now.getHours();
+        let time = now.getMinutes();
+        let month = now.getMonth();
+        let date = now.getDate();
+
+        let fin_date = date;
+        let fin_hour = ja_hour - 6;
+
+        if(fin_hour < 0) {
+            fin_date -= 1;
+            fin_hour = 25 - 6;
+        }
 
         const ja_present = `${month + 1}/${date}/${ja_hour}:${time}`;
-        const fin_present = `${month + 1}/${date}/${ja_hour - 6}:${time}`
+        const fin_present = `${month + 1}/${fin_date}/${fin_hour}:${time}`;
 
         document.getElementById('japannow').textContent = ja_present;
         document.getElementById('finnow').textContent = fin_present;

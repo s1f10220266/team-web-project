@@ -3,43 +3,32 @@ img {
     max-height: 100%;
    }
 .size_image{
-    width: 30%;
+    width: 60%;
     height: auto;
+    display: block;
+    margin: 0 auto;
 }
-
 .print_side{
     display:flex;
     justify-content: space-around;
 }
-#sightseiin_hedder{
-    position:absolute ; left:350px ; top:750px ; 
-}
-#sightseiin_hedder2{
-    position:absolute ; left:755px ; top:550px ; 
-}
-#food_hedder{
-    position:absolute ; left:130px ; top:940px ; 
-}
-#food_hedder2{
-    position:absolute ; left:755px ; top:940px ; 
-}
-#place_hedder{
-    position:absolute ; left:150px ; top:1325px ; 
-}
-#place_I_wanna_go{
-    margin-left: 150px;
-    margin-top: 40px;
-}
-
 #slide_button {
+    text-align: center;
+}
+#centerise{
+    text-align: center;
+}
+#centerise2{
+    text-align: center;
+}
+#centerise3{
     text-align: center;
 }
 .centerise{
     text-align: center;
 }
-#centerise{
-    text-align: center;
-
+.font_size{
+    font-size: 28px 
 }
 .sidebar{
     position : absolute;
@@ -55,4 +44,7 @@ img {
 .main{
     margin-left : 20%;
     font-size: 1.8em;
+}
+.information{
+    text-align: center;
 }

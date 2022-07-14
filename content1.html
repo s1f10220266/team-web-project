@@ -17,43 +17,44 @@
         
     <div class="main">
         <h1 class="centerise">インド紹介ページ</h1>
-        <div id="centerise"><img  src="images/flag-of-india-india-flag.jpg"></div>
-        <p>今回
+        <div class="centerise"><img  src="images/india_flag.jpg"></div>
+        <p class="font_size">インドは五千年の歴史を有する広大な南アジアの国で、<br>14億もの人口と日本の約8.8倍の広大な国土を有する多民族国家です。<br>しばしば国というより大陸であるといわれ、その多様性が見受けられます。
         </p>
-        <h1 class="centerise">主な観光名所</h1>
-        <h2 id="sightseiin_hedder">タージマハル</h2>
-        <h2 id="sightseiin_hedder2">エローラ石窟群</h2>
-        <div class="print_side">
-        <p class="size_image"><img src="images/main1.jpg"></p>
-        <p class="size_image"><img src="images/エローラ.jpg"></p>
-        </div>
-        <h1 class="centerise">人気の食べ物</h1>
-        <h2 id="food_hedder">カレーとナン</h2>
-        <h2 id="food_hedder2">グラブジャムン</h2>
-        <div class="print_side">
-        <p class="size_image"><img src="images/image.jpg"></p>
-        <p class="size_image"><img src="images/Gulaab_Jamun_(homemade!)_bright.jpg"></p>
-        </div>
-        <h1 class="centerise">インドに行ったらやってみたいこと</h1>
-        <h2 id="place_hedder">ゾウに乗る</h2>
-        <div id="place_I_wanna_go">
-        <p class="size_image"><img src="images/10692001514.jpg"></p></div>
+        <div class="information">
+            <h2>目次</h2>
 
+
+            <p><a href="#centerise">1. 主な観光名所</a></p>
+            <p><a href="#centerise2">2. 人気の食べ物</a></p>
+            <p><a href="#centerise3">3. アクティビティ</a></p>
+        </div>
+        <h1 id="centerise">主な観光名所</h1>
+        <h2 class="centerise">タージ・マハル</h2>
+        <img class="size_image" src="images/main1.jpg">
+        <p>タージ・マハルは直訳すると「宮殿の王冠」という意味で、<br>ムガル帝国第5代皇帝シャー・ジャハーンが、1631年に死去した、<br>愛妃ムムターズ・マハルのため建設した総大理石のお墓です。</p>
+        <h1 id="centerise2">人気の食べ物</h1>
+        <h2 class="centerise">カレーとナン</h2>
+        <p class="size_image"><img src="images/image.jpg"></p>
+        <p>インドの食べ物というと真っ先にカレーが思い浮かびますが、実は本場インドには「カレー」と呼ばれる料理はなく。サーグ、サンバール、コルマ、ダールなど、スパイスを使って煮込まれたインド料理全体のことを指します。</p>
+        <h1 id="centerise3">アクティビティ</h1>
+        <h2 class="centerise">ゾウのタクシー</h2>
+        <p class="size_image"><img src="images/10692001514.jpg"></p>
+        <p id="elephant_place">インドでゾウというとゾウの神様であるガネーシャなど神聖なものの象徴的なイメージがありますが、このように象の背中に乗ってタクシーのように運んでもらうこともできるのです。</p>
         <hr>
 
 
 
-        <p>時差は</p>
+        <p>時差は<strong>3時間30分</strong>です</p>
 
         <p>
             日本：<span id="japannow"></span>
-            フィンランド：<span id="indianow"></span>
+            インド：<span id="indianow"></span>
         </p>
         
 
 
         <div id="slide_button">
-            <img src="images/flag-of-india-india-flag.jpg" id="slide">
+            <img src="images/india_flag.jpg" id="slide">
             <p><span id="imageIndex"></span>枚目</p>
             
                 <form action="#">
@@ -67,19 +68,31 @@
         
         <script>
             'use strict';
-            const now = new Date();
-            const ja_hour = now.getHours();
-            const time = now.getMinutes();
-            const month = now.getMonth();
-            const date = now.getDate();
+            let now = new Date();
+            let ja_hour = now.getHours();
+            let time = now.getMinutes();
+            let month = now.getMonth();
+            let date = now.getDate();
+
+            let india_date = date;
+            let india_hour = ja_hour - 3;
+            let india_time = time - 30;
+
+            if(india_time < 0) {
+                india_hour -= 1;
+                india_time = time + 60 - 30;
+            } else if(india_hour < 0) {
+                india_date -= 1;
+                india_hour = 25 - 3; 
+            }
 
             const ja_present = `${month + 1}/${date}/${ja_hour}:${time}`;
-            const india_present = `${month + 1}/${date}/${ja_hour - 3}:${time-30}`
+            const india_present = `${month + 1}/${india_date}/${india_hour}:${india_time}`;
             document.getElementById('japannow').textContent = ja_present;
             document.getElementById('indianow').textContent = india_present;
 
 
-            const images = ["images/frag.png","images/Santa.jpg", "images/LapLand.jpg", "images/moomin.jpg"];
+            const images = ["images/india_flag.jpg","images/main1.jpg", "images/ero-ra.jpg", "images/image.jpg","images/gulab_jamun.jpg","images/10692001514.jpg"];
             let current = 0;
             document.getElementById('imageIndex').textContent = current + 1;
             function changeImage(num) {
