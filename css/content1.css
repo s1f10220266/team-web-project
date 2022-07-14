@@ -12,7 +12,7 @@ img {
     justify-content: space-around;
 }
 #sightseiin_hedder{
-    position:absolute ; left:130px ; top:550px ; 
+    position:absolute ; left:350px ; top:750px ; 
 }
 #sightseiin_hedder2{
     position:absolute ; left:755px ; top:550px ; 
@@ -33,4 +33,26 @@ img {
 
 #slide_button {
     text-align: center;
+}
+.centerise{
+    text-align: center;
+}
+#centerise{
+    text-align: center;
+
+}
+.sidebar{
+    position : absolute;
+    top : 0;
+    left : 0;
+    width : 20%;
+    color : #000000;
+    background-color : #a9ceec;
+    font-size : 24px;
+    font-weight : bold;
+    text-align : left
+}
+.main{
+    margin-left : 20%;
+    font-size: 1.8em;
 }
