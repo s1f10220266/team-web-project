@@ -1,3 +1,16 @@
+.sidebar{
+    position : absolute;
+    top : 0;
+    left : 0;
+    bottom: 0;
+    width : 20%;
+    height: 550%;
+    color : #000000;
+    background-color : #a9ceec;
+    font-size : 28px;
+    font-weight : bold;
+}
+
 #picture1{
     width: 40%;
     height: 100%;
