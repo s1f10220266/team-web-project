@@ -29,7 +29,6 @@
                 <h2>目次</h2>
                     <p><a href="#flag">パエリア</a></p>
                     <p><a href="#time_diff">時差</a></p>
-                    <p><a href="#spot">観光スポット</a></p>
             </div>
 
             <div id="flex">
@@ -49,7 +48,7 @@
 
             <h2><a id="flag">パエリア</a></h2>
             <div class="information">
-                <img src="images/paella.png" id="picture1">
+                <img src="images/food_paella.png" id="picture1">
                 <p>パエリアとは、エビや貝などの魚介類とお米をサフランとともに炊いたスペイン料理です。</p>
             </div>
 
@@ -65,29 +64,6 @@
                 </p>
             </div>
 
-            <hr>
-
-            <h2><a id="spot">観光スポット</a></h2>
-            <div id="slide_button">
-                <h2>スライドショー</h2>
-                <p>prevボタンとnextボタンを押して画像を変えて見てみよう!</p>
-                <img src="publicdomainq-0028146tug.jpg" id="slide">
-                <p><span id="imageIndex"></span>枚目</p>
-
-
-                <form action="#">
-                    <p>
-                        <input type="button" id="prev" value="prev" onclick="changeImage(-1)">
-                        <input type="button" id="next" value="next" onclick="changeImage(1)">
-                    </p>
-                </form>
-
-            </div>
-            <ul>
-                <li>1枚目 - サンタクロース村</li>
-                <li>2枚目 - ラップランド</li>
-                <li>3枚目 - ムーミンワールドへムーミン</li>
-            </ul>
         </div>
 
         <script>
@@ -112,7 +88,7 @@
             document.getElementById('japannow').textContent = ja_present;
             document.getElementById('spainnow').textContent = spain_present;
 
-            const images = ["publicdomainq-0028146tug.jpg", "images/LapLand.jpg", "images/moomin.jpg"];
+            const images = ["Sagradafamilia.jpeg", "images/LapLand.jpg", "images/moomin.jpg"];
             let current = 0;
             document.getElementById('imageIndex').textContent = current + 1;
 
