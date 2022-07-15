@@ -4,7 +4,7 @@
     left : 0;
     bottom: 0;
     width : 20%;
-    height: 370%;
+    height: 430%;
     color : #000000;
     background-color : #a9ceec;
     font-size : 28px;
@@ -13,6 +13,7 @@
 
 .main{
     margin-left : 20%;
+    font-size: 1.8em;
 }
 
 #map{
@@ -30,4 +31,19 @@
 
 .information{
     text-align: center;
+}
+
+
+#picture1{
+    width: 40%;
+    height: 100%;
+}
+
+#flex{
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: flex-start;
+    justify-content: flex-start;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
 }
